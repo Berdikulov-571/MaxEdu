@@ -13,11 +13,11 @@ namespace MaxEdu.Domain.Entities.Groups
         }
         public int Id { get; set; }
         public string GroupName { get; set; }
-        [ForeignKey(nameof(Teacher))]
+        [ForeignKey(nameof(User))]
         public int TeacherId { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public User Teacher { get; set; }
+        public User User { get; set; }
         public ICollection<StudentGroup> StudentGroups { get; set; }
         public ICollection<Lesson> Lessons { get; set; }
     }
