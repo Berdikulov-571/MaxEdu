@@ -8,13 +8,13 @@ namespace MaxEdu.Domain.Entities.Groups
     {
         [Key]
         public int Id { get; set; }
-        [ForeignKey(nameof(Student))]
+        [ForeignKey(nameof(User))]
         public int StudentId { get; set; }
         [ForeignKey(nameof(Group))]
         public int GroupId { get; set; }
         public DateTime JoinDate { get; set; }
         public bool IsPayed { get; set; }
-        public User Student { get; set; }
+        public User User { get; set; }
         public Group Group { get; set; }
     }
 }
